@@ -1,48 +1,13 @@
-# nextjs-simple-boilerplate
+# shaunsaker
 
-A Next.js, Firebase and Redux boilerplate that we use internally.
-
-## What's in the box?
-
-- Next.js (server-side rendering when you need it, static exporting if you don't)
-- Redux
-- Eslint and Prettier
-- Multiple Firebase environments
-- Auth
-- Firestore
-- Cloud storage
-- Easy to use action dispatch system
-- Google Analytics
-- Error handling
-- System message handling
-- Loading handling (page and app loading)
-- SEO
-- Material-ui
-- Basic components (Layout, HeaderBar, FooterBar, Typography)
-- Constant improvement and support
-
-## In the pipeline
-
-- Style guide including an explanation of how and why we do things the way we do them
-- Automate part of the project cloning process with cookie-cutter.
-- Purge the Redux persistor based on a flag (e.g. date) in Firestore
-- Unit testing
-- Travis CI
-
-## Usage
-
-Take a look at the [Setup Guide](./docs/SETUP_GUIDE.md).
-
-`NOTE: ENV refers to the environment you are deploying to, ie. development, testing, staging, production.`
-
-TODO: Style guide
+My Portfolio
 
 ## Development
 
 1. Clone the project:
 
 ```
-git clone https://github.com/AuxStudio/nextjs-simple-boilerplate
+git clone https://github.com/shaunsaker/shaunsaker
 ```
 
 2. Install dependencies:
@@ -63,7 +28,7 @@ yarn run dev
 
 On PR approval and merge into master:
 
-6. yarn run publish\
+6. yarn run publish
 
 ### Upgrade dependencies
 

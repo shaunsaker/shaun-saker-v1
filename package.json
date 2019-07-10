@@ -1,10 +1,10 @@
 {
-  "name": "nextjs-simple-boilerplate",
-  "version": "1.2.0",
-  "description": "A Next.js, Firebase and Redux boilerplate that we use internally",
+  "name": "shaunsaker",
+  "version": "1.0.0",
+  "description": "My Portfolio",
   "main": "index.js",
-  "repository": "https://github.com/AuxStudio/nextjs-simple-boilerplate",
-  "author": "shaunsaker <shaun@aux.co.za>",
+  "repository": "https://github.com/shaunsaker/shaunsaker",
+  "author": "shaunsaker <sakershaun@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "cp ./src/app/.env.dev ./src/app/.env && next dev ./src/app",

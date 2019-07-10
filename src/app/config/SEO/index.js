@@ -16,7 +16,7 @@ const SEO = {
     image: `${url}/static/images/open-graph.png`,
     imageWidth: 1200,
     imageHeight: 630,
-    site_name: 'nextjs-simple-boilerplate', // TODO: Replace this
+    site_name: 'shaunsaker', // TODO: Replace this
   },
   twitter: {
     handle: '',
