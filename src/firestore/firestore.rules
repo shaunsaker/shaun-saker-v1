@@ -1,0 +1,33 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /support/{supportId} {
+      allow create: if request.resource.data.name != null && request.resource.data.email != null && request.resource.data.message != null; 
+    }
+    
+    match /users/{userId} {
+    	allow get: if request.auth.uid != null; // only get if authed
+      allow list: if request.auth.uid != null; 
+      allow create, update: if request.auth.uid == userId; // only allow a write on a user's own document
+    }
+    
+    match /deleteUsers/{deleteUserId} {
+      allow create: if request.auth.uid == deleteUserId; // only a allow a create once at the requesting user's uid
+    }
+    
+    match /projects/{projectId} {
+      allow create, update: if request.resource.data.createdBy == request.auth.uid; // only allow if the requesting user's uid is attached as createdBy
+      allow list: if request.auth.uid != null; 
+      allow delete: if request.auth.uid == resource.data.createdBy; // only allow users to delete projects that they created
+    }
+    
+    match /teams/{teamId} {
+      allow create, update: if request.resource.data.createdBy == request.auth.uid; // only allow if the requesting user's uid is attached as createdBy
+      allow list: if request.auth.uid != null; 
+    }
+    
+    match /invites/{inviteId} {
+    	allow create: if request.resource.data.uid == request.auth.uid;
+      allow list: if request.auth.uid != null;
+    }
+  }
+}
