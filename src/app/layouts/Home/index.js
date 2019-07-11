@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import styles from './styles';
+import Home from './Home';
 
-import Layout from '../../components/Layout';
-import Typography from '../../components/Typography';
+export class HomeContainer extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Home = () => {
-  return (
-    <Layout>
-      <div className="container">
-        <Typography type="title">Hello World</Typography>
-      </div>
+    this.state = {};
+  }
 
-      <style jsx>{styles}</style>
-    </Layout>
-  );
-};
+  static propTypes = {};
 
-Home.propTypes = {};
-Home.defaultProps = {};
+  static defaultProps = {};
 
-export default Home;
+  render() {
+    return <Home />;
+  }
+}
+
+function mapStateToProps() {
+  return {};
+}
+
+export default connect(mapStateToProps)(HomeContainer);
