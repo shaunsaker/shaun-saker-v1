@@ -17,20 +17,16 @@ const styles = css`
     ); /* first stop at Header height */
   }
 
-  .content-wrapper {
+  .content-container {
     max-width: ${sizes.maxContentWidth}px;
     width: 100%;
     margin: 0 auto;
-  }
-
-  .content-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: ${rhythm.vt * 2}px ${rhythm.hz}px;
-    background-color: white;
     align-items: stretch;
   }
 

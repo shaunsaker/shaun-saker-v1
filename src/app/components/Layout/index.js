@@ -12,11 +12,7 @@ const Layout = ({ headerBarProps, children }) => {
     <div className="container">
       <HeaderBar {...headerBarProps} />
 
-      <div className="content-wrapper">
-        <Card>
-          <div className="content-container">{children}</div>
-        </Card>
-      </div>
+      <div className="content-container">{children}</div>
 
       <div className="dev-info-container">
         <DevInfo />
