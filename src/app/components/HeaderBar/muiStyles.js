@@ -4,11 +4,10 @@ const styles = {
   wrapper: {
     backgroundColor: colors.primary,
     zIndex: 1,
-    boxShadow: 'none',
   },
   container: {
-    justifyContent: 'center',
     minHeight: 64,
+    justifyContent: 'space-between',
   },
 };
 

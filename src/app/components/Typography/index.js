@@ -8,17 +8,7 @@ import { colors } from '../../static/styles/styleConstants';
 
 const boldText = ['title', 'heading', 'link'];
 
-const TypographyComponent = ({
-  type,
-  fontSize,
-  secondary,
-  color,
-  bold,
-  center,
-  gutterBottom,
-  children,
-  style,
-}) => {
+const TypographyComponent = ({ type, fontSize, secondary, color, bold, center, gutterBottom, children, style }) => {
   const variant = types[type];
   const allStyles = {
     ...(type === 'link' && styles.link),
