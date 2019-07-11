@@ -1,18 +1,18 @@
-const secondaryColor = 'rgba(38, 50, 56, 1.0)';
+const getPrimaryColor = (opacity) => `rgba(54, 73, 88, ${opacity})`;
 
 const colors = {
-  primary: '#FF5722',
-  secondary: secondaryColor,
-  lightSecondary: 'rgba(38, 50, 56, 0.5)',
-  accent: '#00A8DD',
-  primaryText: secondaryColor,
-  secondaryText: 'rgba(38, 50, 56, 0.67)',
-  lightGrey: 'rgba(38, 50, 56, 0.05)',
-  grey: 'rgba(38, 50, 56, 0.5)',
+  primary: getPrimaryColor(1),
+  secondary: '#3B6064',
+  tertiary: '#F2F5EA',
+  accent: '#49BC92',
+  primaryText: getPrimaryColor(1),
+  secondaryText: getPrimaryColor(0.67),
+  grey: getPrimaryColor(0.33),
+  lightGrey: getPrimaryColor(0.167),
   transBlack: 'rgba(0, 0, 0, 0.67)',
   transWhite: 'rgba(255, 255, 255, 0.67)',
-  green: '#4caf50',
-  red: '#f44336',
 };
+
+export { getPrimaryColor };
 
 export default colors;

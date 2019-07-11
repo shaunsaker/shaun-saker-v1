@@ -6,11 +6,7 @@ import { colors } from '../../static/styles/styleConstants';
 
 const TabBar = ({ currentTabIndex, tabs, handleClick }) => {
   return (
-    <AppBar
-      position="static"
-      color="inherit"
-      style={{ boxShadow: 'none', backgroundColor: colors.lightGrey }}
-    >
+    <AppBar position="static" color="inherit" style={{ boxShadow: 'none', backgroundColor: colors.lightGrey }}>
       <Tabs
         value={currentTabIndex}
         indicatorColor="primary"

@@ -1,7 +1,10 @@
+import { colors } from '../../static/styles/styleConstants';
+
 const styles = {
   wrapper: {
-    backgroundColor: '#FFF',
+    backgroundColor: colors.primary,
     zIndex: 1,
+    boxShadow: 'none',
   },
   container: {
     justifyContent: 'center',
