@@ -16,6 +16,13 @@ const theme = createMuiTheme({
       main: colors.secondary,
     },
   },
+  overrides: {
+    MuiTooltip: {
+      tooltip: {
+        backgroundColor: colors.grey,
+      },
+    },
+  },
 });
 
 export default theme;

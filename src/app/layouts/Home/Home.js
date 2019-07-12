@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 import Layout from '../../components/Layout';
-import Typography from '../../components/Typography';
+import Jumbotron from './Jumbotron';
 
 const Home = () => {
   return (
     <Layout>
       <div className="container">
-        <Typography type="title">Hello World</Typography>
+        <Jumbotron />
       </div>
 
       <style jsx>{styles}</style>
