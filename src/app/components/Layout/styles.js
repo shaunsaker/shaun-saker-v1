@@ -10,7 +10,6 @@ const styles = css`
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    padding: ${headerHeight}px 0; /* Header height */
     background-image: linear-gradient(
       ${colors.primary} ${headerHeight}px,
       ${colors.secondary}
@@ -26,7 +25,6 @@ const styles = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: ${rhythm.vt * 2}px ${rhythm.hz}px;
     align-items: stretch;
   }
 
@@ -35,12 +33,6 @@ const styles = css`
     bottom: 0;
     left: 0;
     z-index: 2;
-  }
-
-  @media (min-width: ${sizes.maxContentWidth}px) {
-    .content-container {
-      padding: ${rhythm.vt * 4}px ${rhythm.hz * 2}px;
-    }
   }
 `;
 
