@@ -5,6 +5,7 @@ const app = {
   contactDetails: {
     email: 'sakershaun@gmail.com',
     tel: '+27833771130',
+    linkedIn: 'https://www.linkedin.com/in/shaunsaker/',
     address: 'Cape Town',
   },
 };
