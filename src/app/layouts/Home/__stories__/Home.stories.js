@@ -3,4 +3,16 @@ import { storiesOf } from '@storybook/react';
 
 import Home from '../Home';
 
-storiesOf('Layouts|Home', module).add('default', () => <Home />);
+const skills = [
+  {
+    name: 'React',
+  },
+  {
+    name: 'React-Native',
+  },
+  {
+    name: 'Firebase',
+  },
+];
+
+storiesOf('Layouts|Home', module).add('default', () => <Home skills={skills} />);
