@@ -1,7 +1,6 @@
-// TODO: Customise all of this
 const app = {
-  name: 'NextJS Simple Boilerplate',
-  url: 'https://github.com/AuxStudio/shaunsaker',
+  name: 'Shaun Saker',
+  url: 'https://www.shaunsaker.com',
   contactDetails: {
     email: 'sakershaun@gmail.com',
     tel: '+27833771130',
