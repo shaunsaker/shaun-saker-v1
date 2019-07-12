@@ -24,7 +24,12 @@ const HeaderBar = () => {
           {links.map((item) => {
             return (
               <div className="link-container">
-                <a href={item.href} className="link">
+                <a
+                  href={item.href}
+                  className="link"
+                  target={item.target}
+                  rel={item.target ? 'noopener noreferrer' : ''}
+                >
                   <Typography type="paragraph" color={colors.tertiary}>
                     {item.name}
                   </Typography>
