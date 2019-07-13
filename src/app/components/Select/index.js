@@ -1,30 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField, MenuItem } from '@material-ui/core';
+import { Select, MenuItem } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
+import { colors, rhythm } from '../../static/styles/styleConstants';
 import styles from './styles';
 
 import Typography from '../Typography';
 
+// FIXME: Htf do you change the color of the Select?
 const muiStyles = {
-  input: {
-    height: 42,
+  root: {
+    backgroundColor: colors.tertiary,
+  },
+  select: {
+    padding: `${rhythm.vt / 2}px ${rhythm.hz / 2}px`,
+    paddingRight: `${rhythm.hz}px`,
   },
 };
 
 const SelectComponent = ({ classes, selectedOptionIndex, options, handleChange }) => {
   return (
     <div className="container">
-      <TextField
+      <Select
+        classes={{
+          ...classes,
+        }}
         value={selectedOptionIndex}
         onChange={handleChange}
-        select
         variant="outlined"
         margin="none"
-        InputProps={{
-          classes: { root: classes.input },
-        }}
       >
         {options.map((item, index) => {
           return (
@@ -33,7 +38,7 @@ const SelectComponent = ({ classes, selectedOptionIndex, options, handleChange }
             </MenuItem>
           );
         })}
-      </TextField>
+      </Select>
 
       <style jsx>{styles}</style>
     </div>

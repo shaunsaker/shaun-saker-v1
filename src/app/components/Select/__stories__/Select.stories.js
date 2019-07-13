@@ -6,13 +6,13 @@ import Select from '..';
 const selectedOptionIndex = 0;
 const options = [
   {
-    name: "Shaun Saker's team",
+    name: 'Mobile Apps (4 / 16)',
   },
   {
-    name: "Astrid Saker's team",
+    name: 'Web Apps (8 / 16)',
   },
   {
-    name: "Isla Saker's team",
+    name: 'Open Source (4 / 16)',
   },
 ];
 
