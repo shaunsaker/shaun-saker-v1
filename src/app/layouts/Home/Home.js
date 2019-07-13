@@ -7,8 +7,9 @@ import styles from './styles';
 import Layout from '../../components/Layout';
 import Jumbotron from './Jumbotron';
 import Skills from './Skills';
+import Contact from './Contact';
 
-const Home = ({ skills }) => {
+const Home = ({ skills, handleContactFormSubmit }) => {
   return (
     <Layout>
       <div className="container">
@@ -16,6 +17,8 @@ const Home = ({ skills }) => {
 
         <Card>
           <Skills skills={skills} />
+
+          <Contact handleSubmit={handleContactFormSubmit} />
         </Card>
       </div>
 
@@ -30,6 +33,7 @@ Home.propTypes = {
       name: PropTypes.string,
     }),
   ),
+  handleContactFormSubmit: PropTypes.func,
 };
 Home.defaultProps = {};
 

@@ -30,6 +30,7 @@ const styles = css`
 
   .buttons-container {
     display: flex;
+    margin-top: ${rhythm.vt}px;
   }
 
   .secondary-button-container {
