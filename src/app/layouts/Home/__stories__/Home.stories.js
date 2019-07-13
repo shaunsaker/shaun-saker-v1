@@ -15,4 +15,8 @@ const skills = [
   },
 ];
 
-storiesOf('Layouts|Home', module).add('default', () => <Home skills={skills} />);
+storiesOf('Layouts|Home', module)
+  .add('default', () => <Home skills={skills} contact={{ handleSubmit: console.log }} />)
+  .add('with Contact form success', () => (
+    <Home skills={skills} contact={{ hasSuccess: true, handleSubmit: console.log }} />
+  ));

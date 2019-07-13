@@ -9,7 +9,7 @@ import Jumbotron from './Jumbotron';
 import Skills from './Skills';
 import Contact from './Contact';
 
-const Home = ({ skills, handleContactFormSubmit }) => {
+const Home = ({ skills, contact }) => {
   return (
     <Layout>
       <div className="container">
@@ -18,7 +18,7 @@ const Home = ({ skills, handleContactFormSubmit }) => {
         <Card>
           <Skills skills={skills} />
 
-          <Contact handleSubmit={handleContactFormSubmit} />
+          <Contact {...contact} />
         </Card>
       </div>
 
@@ -33,7 +33,7 @@ Home.propTypes = {
       name: PropTypes.string,
     }),
   ),
-  handleContactFormSubmit: PropTypes.func,
+  contact: PropTypes.shape({}),
 };
 Home.defaultProps = {};
 

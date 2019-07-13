@@ -6,13 +6,14 @@ import styles from './styles';
 
 import Section from '../../../components/Section';
 import Form from '../../../components/Form';
+import Success from './Success';
 
-const Contact = ({ handleSubmit }) => {
+const Contact = ({ hasSuccess, handleSubmit }) => {
+  const formComponent = hasSuccess ? <Success /> : <Form fields={fields} handleSubmit={handleSubmit} />;
+
   return (
     <div className="container">
-      <Section title="Get in Touch">
-        <Form fields={fields} handleSubmit={handleSubmit} />
-      </Section>
+      <Section title="Get in Touch">{formComponent}</Section>
 
       <style jsx>{styles}</style>
     </div>
@@ -20,6 +21,7 @@ const Contact = ({ handleSubmit }) => {
 };
 
 Contact.propTypes = {
+  hasSuccess: PropTypes.bool,
   handleSubmit: PropTypes.func,
 };
 Contact.defaultProps = {};
