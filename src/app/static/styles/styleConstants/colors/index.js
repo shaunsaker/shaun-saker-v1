@@ -6,7 +6,7 @@ const colors = {
   tertiary: '#F2F5EA',
   accent: '#49BC92',
   primaryText: getPrimaryColor(1),
-  secondaryText: getPrimaryColor(0.67),
+  secondaryText: getPrimaryColor(0.8),
   grey: getPrimaryColor(0.33),
   lightGrey: getPrimaryColor(0.167),
   transBlack: 'rgba(0, 0, 0, 0.67)',
