@@ -6,15 +6,15 @@ import styles from './styles';
 import Section from '../../../components/Section';
 import Label from '../../../components/Label';
 
-const Skills = ({ skills }) => {
+const Skills = ({ items }) => {
   return (
     <div className="container">
       <Section title="Skills">
-        <div className="skill-items-container">
-          {skills &&
-            skills.map((item) => {
+        <div className="items-container">
+          {items &&
+            items.map((item) => {
               return (
-                <div key={item.name} className="skill-item-container">
+                <div key={item.name} className="item-container">
                   <Label>{item.name}</Label>
                 </div>
               );
@@ -28,7 +28,7 @@ const Skills = ({ skills }) => {
 };
 
 Skills.propTypes = {
-  skills: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
     }),

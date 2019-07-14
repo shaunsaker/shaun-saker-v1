@@ -6,11 +6,12 @@ const styles = css`
   .container {
   }
 
-  .skill-items-container {
+  .items-container {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .skill-item-container {
+  .item-container {
     margin: 0 ${rhythm.hz / 2}px ${rhythm.vt}px 0;
   }
 `;

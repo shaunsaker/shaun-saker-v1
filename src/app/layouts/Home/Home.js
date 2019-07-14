@@ -7,18 +7,21 @@ import styles from './styles';
 import Layout from '../../components/Layout';
 import Jumbotron from './Jumbotron';
 import Skills from './Skills';
+import Projects from './Projects';
 import Contact from './Contact';
 
-const Home = ({ skills, contact }) => {
+const Home = ({ skillsProps, projectsProps, contactProps }) => {
   return (
     <Layout>
       <div className="container">
         <Jumbotron />
 
         <Card>
-          <Skills skills={skills} />
+          <Skills {...skillsProps} />
 
-          <Contact {...contact} />
+          <Projects {...projectsProps} />
+
+          <Contact {...contactProps} />
         </Card>
       </div>
 
@@ -28,12 +31,13 @@ const Home = ({ skills, contact }) => {
 };
 
 Home.propTypes = {
-  skills: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-    }),
-  ),
-  contact: PropTypes.shape({}),
+  skillsProps: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({})),
+  }),
+  projectsProps: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({})),
+  }),
+  contactProps: PropTypes.shape({}),
 };
 Home.defaultProps = {};
 
