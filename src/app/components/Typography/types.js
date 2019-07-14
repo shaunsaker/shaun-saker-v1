@@ -3,7 +3,7 @@
  */
 const types = {
   title: 'h2',
-  heading: 'h5',
+  heading: 'h6',
   paragraph: 'body2',
   small: 'caption',
   link: 'body1',
