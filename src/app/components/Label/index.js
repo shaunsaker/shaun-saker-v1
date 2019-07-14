@@ -7,11 +7,13 @@ import { colors } from '../../static/styles/styleConstants';
 
 import Typography from '../Typography';
 
-const Label = ({ children }) => {
+const Label = ({ small, children }) => {
+  const textType = small ? 'small' : 'paragraph';
+
   return (
     <Card style={{ display: 'inline-block' }}>
-      <div className="container">
-        <Typography type="paragraph" color={colors.tertiary}>
+      <div className={`container${small ? ' small' : ''}`}>
+        <Typography type={textType} color={colors.tertiary}>
           {children}
         </Typography>
       </div>
@@ -22,6 +24,7 @@ const Label = ({ children }) => {
 };
 
 Label.propTypes = {
+  small: PropTypes.bool,
   children: PropTypes.string,
 };
 Label.defaultProps = {};
