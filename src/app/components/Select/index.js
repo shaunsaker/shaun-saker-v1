@@ -49,7 +49,7 @@ const SelectComponent = ({ classes, selectedOptionIndex, options, handleChange }
 SelectComponent.propTypes = {
   classes: PropTypes.shape({}),
   selectedOptionIndex: PropTypes.number,
-  options: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })).isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })),
   handleChange: PropTypes.func,
 };
 SelectComponent.defaultProps = {};
