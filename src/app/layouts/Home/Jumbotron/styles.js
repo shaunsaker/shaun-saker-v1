@@ -11,6 +11,7 @@ const styles = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 ${rhythm.hz}px;
   }
 
   .avatar-container {

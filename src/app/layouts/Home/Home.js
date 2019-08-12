@@ -17,11 +17,13 @@ const Home = ({ skillsProps, projectsProps, contactProps }) => {
         <Jumbotron />
 
         <Card>
-          <Skills {...skillsProps} />
+          <div className="content-container">
+            <Skills {...skillsProps} />
 
-          <Projects {...projectsProps} />
+            <Projects {...projectsProps} />
 
-          <Contact {...contactProps} />
+            <Contact {...contactProps} />
+          </div>
         </Card>
       </div>
 
