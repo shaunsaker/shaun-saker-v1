@@ -22,6 +22,11 @@ const theme = createMuiTheme({
         backgroundColor: colors.grey,
       },
     },
+    MuiLinearProgress: {
+      barColorPrimary: {
+        backgroundColor: colors.accent,
+      },
+    },
   },
 });
 

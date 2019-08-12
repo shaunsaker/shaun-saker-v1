@@ -71,7 +71,6 @@ export class HeaderBarContainer extends React.Component {
 
   render() {
     const { hasScrolled } = this.state;
-    console.log({ hasScrolled });
 
     return <HeaderBar hasScrolled={hasScrolled} handleLinkClick={this.onLinkClick} />;
   }
