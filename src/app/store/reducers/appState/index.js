@@ -9,7 +9,7 @@ export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case 'SET_SYSTEM_MESSAGE':
       newState = cloneObject(state);
-      newState.systemMessage = payload;
+      newState.systemMessage = payload.systemMessage;
       return newState;
 
     case 'RESET_SYSTEM_MESSAGE':
