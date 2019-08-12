@@ -1,51 +1,48 @@
 import React from 'react';
-import { AppBar, Toolbar as ToolBar } from '@material-ui/core';
-import Link from 'next/link';
+import PropTypes from 'prop-types';
 
-import links from './links';
-import muiStyles from './muiStyles';
-import styles from './styles';
-import { colors } from '../../static/styles/styleConstants';
+import HeaderBar from './HeaderBar';
 
-import Logo from './Logo';
-import Typography from '../Typography';
+export class HeaderBarContainer extends React.Component {
+  constructor(props) {
+    super(props);
 
-const HeaderBar = () => {
-  return (
-    <AppBar position="fixed" style={muiStyles.wrapper}>
-      <ToolBar style={muiStyles.container}>
-        <div className="logo-container">
-          <Link href="/">
-            <Logo />
-          </Link>
-        </div>
+    this.onLinkClick = this.onLinkClick.bind(this);
+    this.scrollToSection = this.scrollToSection.bind(this);
 
-        <div className="links-container">
-          {links.map((item) => {
-            return (
-              <div key={item.name} className="link-container">
-                <a
-                  href={item.href}
-                  className="link"
-                  target={item.target}
-                  rel={item.target ? 'noopener noreferrer' : ''}
-                >
-                  <Typography type="paragraph" color={colors.tertiary}>
-                    {item.name}
-                  </Typography>
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      </ToolBar>
+    this.state = {};
+  }
 
-      <style jsx>{styles}</style>
-    </AppBar>
-  );
-};
+  static propTypes = {};
 
-HeaderBar.propTypes = {};
-HeaderBar.defaultProps = {};
+  static defaultProps = {};
 
-export default HeaderBar;
+  onLinkClick(link) {
+    const { id: sectionId, href } = link;
+
+    if (sectionId) {
+      this.scrollToSection(sectionId);
+    } else if (href) {
+      window.open(href, '_blank');
+    }
+  }
+
+  scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    const rect = element.getBoundingClientRect();
+    const { top } = rect;
+    const { scrollY } = window;
+    const newTop = top + scrollY - 64; // - header height
+
+    window.scroll({
+      top: newTop,
+      behavior: 'smooth',
+    });
+  }
+
+  render() {
+    return <HeaderBar handleLinkClick={this.onLinkClick} />;
+  }
+}
+
+export default HeaderBarContainer;

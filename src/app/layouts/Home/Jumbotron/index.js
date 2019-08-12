@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import contactLinks from './contactLinks';
 import styles from './styles';
@@ -10,7 +9,7 @@ import IconButton from '../../../components/IconButton';
 
 const Jumbotron = () => {
   return (
-    <div className="container">
+    <div id="home" className="container">
       <div className="avatar-container">
         <img src="/static/images/avatar.jpg" alt="Shaun Saker" className="avatar" />
       </div>

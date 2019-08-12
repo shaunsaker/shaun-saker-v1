@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-import { rhythm } from '../../static/styles/styleConstants';
+import { colors, rhythm, sizes } from '../../static/styles/styleConstants';
 
 const styles = css`
   .logo-container {
@@ -17,12 +17,21 @@ const styles = css`
   }
 
   .link-container {
-    margin-left: ${rhythm.hz}px;
   }
 
   .link {
     text-decoration: none;
     cursor: pointer;
+    padding: ${rhythm.vt}px ${rhythm.hz / 4}px;
+  }
+  .link:focus {
+    outline: 2px solid ${colors.accent};
+  }
+
+  @media (min-width: ${sizes.maxContentWidth}px) {
+    .link {
+      padding: ${rhythm.vt}px ${rhythm.hz / 2}px;
+    }
   }
 `;
 
