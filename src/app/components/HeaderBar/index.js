@@ -7,15 +7,38 @@ export class HeaderBarContainer extends React.Component {
   constructor(props) {
     super(props);
 
+    this.onScroll = this.onScroll.bind(this);
     this.onLinkClick = this.onLinkClick.bind(this);
+    this.setHasScrolled = this.setHasScrolled.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
 
-    this.state = {};
+    this.state = {
+      hasScrolled: false,
+    };
   }
 
   static propTypes = {};
 
   static defaultProps = {};
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  onScroll() {
+    const { hasScrolled } = this.state;
+    const { scrollY } = window;
+
+    if (!hasScrolled && scrollY > 0) {
+      this.setHasScrolled(true);
+    } else if (hasScrolled && scrollY <= 0) {
+      this.setHasScrolled(false);
+    }
+  }
 
   onLinkClick(link) {
     const { id: sectionId, href } = link;
@@ -25,6 +48,12 @@ export class HeaderBarContainer extends React.Component {
     } else if (href) {
       window.open(href, '_blank');
     }
+  }
+
+  setHasScrolled(hasScrolled) {
+    this.setState({
+      hasScrolled,
+    });
   }
 
   scrollToSection(sectionId) {
@@ -41,7 +70,10 @@ export class HeaderBarContainer extends React.Component {
   }
 
   render() {
-    return <HeaderBar handleLinkClick={this.onLinkClick} />;
+    const { hasScrolled } = this.state;
+    console.log({ hasScrolled });
+
+    return <HeaderBar hasScrolled={hasScrolled} handleLinkClick={this.onLinkClick} />;
   }
 }
 

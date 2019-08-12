@@ -5,6 +5,10 @@ const styles = {
     backgroundColor: colors.primary,
     zIndex: 1,
   },
+  noShadow: {
+    boxShadow: 'none',
+  },
+
   container: {
     minHeight: 64,
     justifyContent: 'space-between',

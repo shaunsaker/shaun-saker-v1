@@ -10,9 +10,9 @@ import { colors } from '../../static/styles/styleConstants';
 import Logo from './Logo';
 import Typography from '../Typography';
 
-const HeaderBar = ({ handleLinkClick }) => {
+const HeaderBar = ({ hasScrolled, handleLinkClick }) => {
   return (
-    <AppBar position="fixed" style={muiStyles.wrapper}>
+    <AppBar position="fixed" style={{ ...muiStyles.wrapper, ...(!hasScrolled && muiStyles.noShadow) }}>
       <ToolBar style={muiStyles.container}>
         <div className="logo-container">
           <button type="button" className="link" onClick={() => handleLinkClick({ id: 'home' })}>
@@ -41,6 +41,7 @@ const HeaderBar = ({ handleLinkClick }) => {
 };
 
 HeaderBar.propTypes = {
+  hasScrolled: PropTypes.bool,
   handleLinkClick: PropTypes.func,
 };
 HeaderBar.defaultProps = {};
