@@ -23,7 +23,7 @@ const HeaderBar = () => {
         <div className="links-container">
           {links.map((item) => {
             return (
-              <div className="link-container">
+              <div key={item.name} className="link-container">
                 <a
                   href={item.href}
                   className="link"
