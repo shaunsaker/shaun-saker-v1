@@ -30,7 +30,7 @@ const Jumbotron = () => {
         {contactLinks.map((item) => {
           return (
             <div key={item.name} className="contact-button-container">
-              <a href={item.href} target="_blank" rel="noopener noreferrer">
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="link">
                 <IconButton iconName={item.iconName} tooltip={item.name} color={colors.tertiary} />
               </a>
             </div>

@@ -40,6 +40,10 @@ const styles = css`
   .contact-button-container {
     margin: 0 ${rhythm.hz}px;
   }
+
+  .link:focus {
+    outline: 2px solid ${colors.accent};
+  }
 `;
 
 export default styles;
