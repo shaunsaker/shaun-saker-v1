@@ -52,6 +52,8 @@ SelectComponent.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })),
   handleChange: PropTypes.func,
 };
-SelectComponent.defaultProps = {};
+SelectComponent.defaultProps = {
+  selectedOptionIndex: 0,
+};
 
 export default withStyles(muiStyles)(SelectComponent);
