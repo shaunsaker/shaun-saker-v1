@@ -106,7 +106,7 @@ Form.propTypes = {
   fields: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      type: PropTypes.oneOf(['text', 'number', 'email', 'password', 'date', 'tel', 'file', 'select']),
+      type: PropTypes.oneOf(['text', 'number', 'email', 'password', 'date', 'tel', 'file', 'select', 'textarea']),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       label: PropTypes.string,
       required: PropTypes.bool,
