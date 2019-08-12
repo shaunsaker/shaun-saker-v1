@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Home from '../Home';
+import { project } from '../Projects/ProjectCard/__stories__/ProjectCard.stories';
 
 const skills = [
   {
@@ -15,7 +16,7 @@ const skills = [
   },
 ];
 const skillsProps = { items: skills };
-const projects = [];
+const projects = [project];
 const projectsProps = {
   selectProps: {
     selectedOptionIndex: 0,

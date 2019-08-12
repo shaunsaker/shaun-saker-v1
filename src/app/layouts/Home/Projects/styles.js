@@ -17,6 +17,7 @@ const styles = css`
   }
 
   .item-container {
+    width: 100%;
     margin: 0 ${rhythm.hz / 2}px ${rhythm.vt}px 0;
   }
 `;

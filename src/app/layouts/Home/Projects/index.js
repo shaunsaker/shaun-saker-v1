@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 import Section from '../../../components/Section';
-import Label from '../../../components/Label';
+import ProjectCard from './ProjectCard';
 import Select from '../../../components/Select';
 
 const Projects = ({ selectProps, items }) => {
@@ -20,7 +20,7 @@ const Projects = ({ selectProps, items }) => {
             items.map((item) => {
               return (
                 <div key={item.name} className="item-container">
-                  <Label>{item.name}</Label>
+                  <ProjectCard {...item} />
                 </div>
               );
             })}

@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'; // eslint-disable-line
 
-import { animation, colors, rhythm } from '../../../../static/styles/styleConstants';
+import { animation, rhythm } from '../../../../static/styles/styleConstants';
 
 const summaryAvatarSize = 100;
 const screenshotSize = 200;
