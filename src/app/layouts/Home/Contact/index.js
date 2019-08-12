@@ -13,7 +13,9 @@ const Contact = ({ hasSuccess, handleSubmit }) => {
 
   return (
     <div className="container">
-      <Section title="Get in Touch">{formComponent}</Section>
+      <Section id="contact" title="Get in Touch">
+        {formComponent}
+      </Section>
 
       <style jsx>{styles}</style>
     </div>

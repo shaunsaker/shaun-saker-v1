@@ -10,7 +10,7 @@ import CircularProgress from '../../../components/CircularProgress';
 const Skills = ({ items }) => {
   return (
     <div className="container">
-      <Section title="Skills">
+      <Section id="skills" title="Skills">
         {items ? (
           <div className="items-container">
             {items.map((item) => {

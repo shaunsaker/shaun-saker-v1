@@ -11,7 +11,7 @@ import CircularProgress from '../../../components/CircularProgress';
 const Projects = ({ selectProps, items }) => {
   return (
     <div className="container">
-      <Section title="Projects">
+      <Section id="projects" title="Projects">
         {items ? (
           <Fragment>
             <div className="select-container">

@@ -5,9 +5,9 @@ import styles from './styles';
 
 import Typography from '../Typography';
 
-const Section = ({ title, children }) => {
+const Section = ({ id, title, children }) => {
   return (
-    <div className="container">
+    <div id={id} className="container">
       <div className="title-text-container">
         <Typography type="title">{title}</Typography>
       </div>
@@ -20,6 +20,7 @@ const Section = ({ title, children }) => {
 };
 
 Section.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.node,
 };
