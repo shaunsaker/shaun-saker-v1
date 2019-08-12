@@ -40,7 +40,8 @@ storiesOf('Layouts|Home', module)
   .add('default', () => (
     <Home skillsProps={skillsProps} projectsProps={projectsProps} contactProps={{ handleSubmit: console.log }} />
   ))
-  .add('with Contact form success', () => (
+  .add('blank states', () => <Home />)
+  .add('with contact form success', () => (
     <Home
       skills={skillsProps}
       projectsProps={projectsProps}

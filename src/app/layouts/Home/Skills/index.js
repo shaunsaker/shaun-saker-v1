@@ -5,21 +5,27 @@ import styles from './styles';
 
 import Section from '../../../components/Section';
 import Label from '../../../components/Label';
+import CircularProgress from '../../../components/CircularProgress';
 
 const Skills = ({ items }) => {
   return (
     <div className="container">
       <Section title="Skills">
-        <div className="items-container">
-          {items &&
-            items.map((item) => {
+        {items ? (
+          <div className="items-container">
+            {items.map((item) => {
               return (
                 <div key={item.name} className="item-container">
                   <Label>{item.name}</Label>
                 </div>
               );
             })}
-        </div>
+          </div>
+        ) : (
+          <div className="loading-container">
+            <CircularProgress />
+          </div>
+        )}
       </Section>
 
       <style jsx>{styles}</style>

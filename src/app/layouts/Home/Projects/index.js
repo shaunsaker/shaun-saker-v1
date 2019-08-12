@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -6,25 +6,33 @@ import styles from './styles';
 import Section from '../../../components/Section';
 import ProjectCard from './ProjectCard';
 import Select from '../../../components/Select';
+import CircularProgress from '../../../components/CircularProgress';
 
 const Projects = ({ selectProps, items }) => {
   return (
     <div className="container">
       <Section title="Projects">
-        <div className="select-container">
-          <Select {...selectProps} />
-        </div>
+        {items ? (
+          <Fragment>
+            <div className="select-container">
+              <Select {...selectProps} />
+            </div>
 
-        <div className="items-container">
-          {items &&
-            items.map((item) => {
-              return (
-                <div key={item.name} className="item-container">
-                  <ProjectCard {...item} />
-                </div>
-              );
-            })}
-        </div>
+            <div className="items-container">
+              {items.map((item) => {
+                return (
+                  <div key={item.name} className="item-container">
+                    <ProjectCard {...item} />
+                  </div>
+                );
+              })}
+            </div>
+          </Fragment>
+        ) : (
+          <div className="loading-container">
+            <CircularProgress />
+          </div>
+        )}
       </Section>
 
       <style jsx>{styles}</style>

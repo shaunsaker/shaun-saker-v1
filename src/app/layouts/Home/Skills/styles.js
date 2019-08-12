@@ -14,6 +14,11 @@ const styles = css`
   .item-container {
     margin: 0 ${rhythm.hz / 2}px ${rhythm.vt}px 0;
   }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export default styles;
