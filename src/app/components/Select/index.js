@@ -31,13 +31,14 @@ const SelectComponent = ({ classes, selectedOptionIndex, options, handleChange }
         variant="outlined"
         margin="none"
       >
-        {options.map((item, index) => {
-          return (
-            <MenuItem key={item.name} value={index}>
-              <Typography type="paragraph">{item.name}</Typography>
-            </MenuItem>
-          );
-        })}
+        {options &&
+          options.map((item, index) => {
+            return (
+              <MenuItem key={item.name} value={index}>
+                <Typography type="paragraph">{item.name}</Typography>
+              </MenuItem>
+            );
+          })}
       </Select>
 
       <style jsx>{styles}</style>
