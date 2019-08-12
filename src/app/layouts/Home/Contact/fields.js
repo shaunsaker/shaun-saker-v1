@@ -1,6 +1,6 @@
 const fields = [
   {
-    type: 'name',
+    type: 'text',
     name: 'name',
     label: 'Name',
     required: true,
