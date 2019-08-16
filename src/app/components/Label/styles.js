@@ -5,7 +5,7 @@ import { colors, rhythm } from '../../static/styles/styleConstants';
 const styles = css`
   .container {
     padding: ${rhythm.vt / 2}px ${rhythm.hz}px;
-    background-color: ${colors.secondaryText};
+    background-image: linear-gradient(${colors.primary}, ${colors.secondary});
   }
 
   .small {
