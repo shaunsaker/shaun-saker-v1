@@ -48,13 +48,14 @@ const ProjectCard = ({
             </div>
 
             <div className="summary-skills-container">
-              {skills.map((item) => {
-                return (
-                  <div key={item.name} className="summary-skill-item-container">
-                    <Label small>{item.name}</Label>
-                  </div>
-                );
-              })}
+              {skills &&
+                skills.map((item) => {
+                  return (
+                    <div key={item.name} className="summary-skill-item-container">
+                      <Label small>{item.name}</Label>
+                    </div>
+                  );
+                })}
             </div>
           </div>
 
@@ -84,15 +85,16 @@ const ProjectCard = ({
             </div>
 
             <div className="links-container">
-              {links.map((item) => {
-                return (
-                  <div key={item.name} className="link-container">
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="link">
-                      <PrimaryButton>{item.name}</PrimaryButton>
-                    </a>
-                  </div>
-                );
-              })}
+              {links &&
+                links.map((item) => {
+                  return (
+                    <div key={item.name} className="link-container">
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="link">
+                        <PrimaryButton>{item.name}</PrimaryButton>
+                      </a>
+                    </div>
+                  );
+                })}
             </div>
           </div>
 
@@ -104,15 +106,16 @@ const ProjectCard = ({
             </div>
 
             <div className="screenshots-container">
-              {screenshots.map((item, index) => {
-                const alt = `${name} - ${index}`;
+              {screenshots &&
+                screenshots.map((item, index) => {
+                  const alt = `${name} - ${index}`;
 
-                return (
-                  <div key={item.src} className="screenshot-container">
-                    <img src={item.src} alt={alt} className="screenshot" />
-                  </div>
-                );
-              })}
+                  return (
+                    <div key={item.src} className="screenshot-container">
+                      <img src={item.src} alt={alt} className="screenshot" />
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>

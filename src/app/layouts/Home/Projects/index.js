@@ -9,7 +9,6 @@ import Select from '../../../components/Select';
 import CircularProgress from '../../../components/CircularProgress';
 
 const Projects = ({ selectProps, items }) => {
-  console.log({ items });
   return (
     <div className="container">
       <Section id="projects" title="Projects">
