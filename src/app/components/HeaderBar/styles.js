@@ -20,6 +20,8 @@ const styles = css`
   }
 
   .link {
+    background: none;
+    border: none;
     text-decoration: none;
     cursor: pointer;
     padding: ${rhythm.vt}px ${rhythm.hz / 4}px;
