@@ -25,6 +25,9 @@ export class HomeContainer extends React.Component {
   static defaultProps = {};
 
   componentDidMount() {
+    /*
+     * TODO: Only sync if authed
+     */
     this.syncData();
   }
 

@@ -1,6 +1,3 @@
-const initialState = {
-  data: null,
-  dateModified: Date.now(),
-};
+const initialState = [];
 
 export default initialState;
