@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from '@material-ui/core';
 
 import styles from './styles';
 import { colors } from '../../static/styles/styleConstants';
@@ -11,15 +10,13 @@ const Label = ({ small, children }) => {
   const textType = small ? 'small' : 'paragraph';
 
   return (
-    <Card style={{ display: 'inline-block' }}>
-      <div className={`container${small ? ' small' : ''}`}>
-        <Typography type={textType} color={colors.tertiary}>
-          {children}
-        </Typography>
-      </div>
+    <div className={`container${small ? ' small' : ''}`}>
+      <Typography type={textType} color={colors.tertiary}>
+        {children}
+      </Typography>
 
       <style jsx>{styles}</style>
-    </Card>
+    </div>
   );
 };
 
