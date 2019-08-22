@@ -5,17 +5,17 @@ import styles from './styles';
 
 import Section from '../../../components/Section';
 import ProjectCard from './ProjectCard';
-import Select from '../../../components/Select';
+import TabBar from '../../../components/TabBar';
 import CircularProgress from '../../../components/CircularProgress';
 
-const Projects = ({ selectProps, items }) => {
+const Projects = ({ tabBarProps, items }) => {
   return (
     <div className="container">
       <Section id="projects" title="Projects">
         {items ? (
           <Fragment>
-            <div className="select-container">
-              <Select {...selectProps} />
+            <div className="tab-bar-container">
+              <TabBar {...tabBarProps} />
             </div>
 
             <div className="items-container">
@@ -41,7 +41,7 @@ const Projects = ({ selectProps, items }) => {
 };
 
 Projects.propTypes = {
-  selectProps: PropTypes.shape({}),
+  tabBarProps: PropTypes.shape({}),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

@@ -27,6 +27,11 @@ const theme = createMuiTheme({
         backgroundColor: colors.accent,
       },
     },
+    MuiTab: {
+      textColorPrimary: {
+        color: colors.secondaryText,
+      },
+    },
   },
 });
 

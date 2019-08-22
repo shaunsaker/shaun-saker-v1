@@ -6,10 +6,8 @@ const styles = css`
   .container {
   }
 
-  .select-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: ${rhythm.hz}px;
+  .tab-bar-container {
+    margin-bottom: ${rhythm.vt * 2}px;
   }
 
   .items-container {

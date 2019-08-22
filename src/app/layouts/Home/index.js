@@ -47,9 +47,7 @@ export class HomeContainer extends React.Component {
     this.syncData();
   }
 
-  onChangeCategory(event) {
-    const { value: index } = event.target;
-
+  onChangeCategory(index) {
     this.setCategoryIndex(index);
   }
 
@@ -176,10 +174,10 @@ export class HomeContainer extends React.Component {
 
     const projectsProps = {
       items: mappedProjects,
-      selectProps: {
-        selectedOptionIndex: categoryIndex,
-        options: sortedCategories,
-        handleChange: this.onChangeCategory,
+      tabBarProps: {
+        currentTabIndex: categoryIndex,
+        tabs: sortedCategories,
+        handleClick: this.onChangeCategory,
       },
     };
 
