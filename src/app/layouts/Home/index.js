@@ -117,8 +117,14 @@ export class HomeContainer extends React.Component {
      * Create the skillsProps
      */
     const { skills } = this.props;
+
+    /*
+     * Sort the skills by order
+     */
+    const sortedSkills = sortArrayOfObjectsByKey(skills, 'order');
+
     const skillsProps = {
-      items: skills,
+      items: sortedSkills,
     };
 
     /*
