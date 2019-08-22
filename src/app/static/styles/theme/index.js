@@ -13,7 +13,7 @@ const theme = createMuiTheme({
       main: colors.primary,
     },
     secondary: {
-      main: colors.secondary,
+      main: colors.accent,
     },
   },
   overrides: {
@@ -28,8 +28,8 @@ const theme = createMuiTheme({
       },
     },
     MuiTab: {
-      textColorPrimary: {
-        color: colors.secondaryText,
+      textColorSecondary: {
+        color: colors.primaryText,
       },
     },
   },

@@ -7,8 +7,8 @@ const TabBar = ({ currentTabIndex, tabs, handleClick }) => {
     <AppBar position="static" color="inherit" style={{ boxShadow: 'none' }}>
       <Tabs
         value={currentTabIndex}
-        indicatorColor="primary"
-        textColor="primary"
+        indicatorColor="secondary"
+        textColor="secondary"
         onChange={(event, index) => handleClick(index)}
       >
         {tabs &&
