@@ -11,7 +11,7 @@ const Jumbotron = () => {
   return (
     <div id="home" className="container">
       <div className="avatar-container">
-        <img src="/static/images/avatar.jpg" alt="Shaun Saker" className="avatar" />
+        <img src="/static/images/avatar.png" alt="Shaun Saker" className="avatar" />
       </div>
 
       <div className="title-text-container">

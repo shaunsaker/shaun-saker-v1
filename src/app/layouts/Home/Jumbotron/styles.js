@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'; // eslint-disable-line
 
 import { colors, rhythm } from '../../../static/styles/styleConstants';
 
-const avatarSize = 100;
+const avatarSize = 120;
 
 const styles = css`
   .container {
