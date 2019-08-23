@@ -101,7 +101,7 @@ const muiStyles = {
     width: '100%',
     marginTop: 0,
     boxShadow: 'none',
-    border: `1px solid ${colors.grey}`,
+    border: `2px solid ${colors.grey}`,
   },
   detailsContainer: {
     flexDirection: 'column',
