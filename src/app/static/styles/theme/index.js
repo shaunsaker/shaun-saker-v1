@@ -32,6 +32,18 @@ const theme = createMuiTheme({
         color: colors.primaryText,
       },
     },
+    MuiInputLabel: {
+      root: {
+        color: colors.secondaryText,
+      },
+    },
+    MuiInput: {
+      underline: {
+        '&:before': {
+          borderBottomColor: colors.secondaryText,
+        },
+      },
+    },
   },
 });
 
