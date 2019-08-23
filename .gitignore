@@ -25,3 +25,6 @@ src/config/firebase
 
 # yarn
 yarn-error.log
+
+# Databse
+src/database
