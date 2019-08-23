@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'; // eslint-disable-line
 
-import { animation, rhythm } from '../../../../static/styles/styleConstants';
+import { animation, colors, rhythm } from '../../../../static/styles/styleConstants';
 
 const summaryAvatarSize = 100;
 const screenshotSize = 200;
@@ -27,7 +27,6 @@ const styles = css`
     display: flex;
     align-items: center;
     margin-top: -6px; /* counter act line height of name text */
-    margin-bottom: ${rhythm.vt / 2}px;
     margin-right: ${48 + rhythm.hz / 2}px; /* don't allow it to overlap the toggle button */
   }
 
@@ -101,6 +100,8 @@ const muiStyles = {
   container: {
     width: '100%',
     marginTop: 0,
+    boxShadow: 'none',
+    border: `1px solid ${colors.grey}`,
   },
   detailsContainer: {
     flexDirection: 'column',

@@ -98,7 +98,7 @@ const ProjectCard = ({
             </div>
           </div>
 
-          <div className="details-section-container">
+          <div>
             <div className="details-heading-container">
               <Typography type="paragraph" bold>
                 Screenshots
