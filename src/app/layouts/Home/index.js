@@ -141,7 +141,7 @@ export class HomeContainer extends React.Component {
     /*
      * Filter out the projects based on the categoryIndex
      */
-    const { id: categoryId } = categories[categoryIndex];
+    const { id: categoryId } = categories[categoryIndex] || {};
     const filteredProjects = projects.filter((item) => item.categories.includes(categoryId));
 
     /*
