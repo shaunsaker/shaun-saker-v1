@@ -1,0 +1,33 @@
+{
+  "shortDescription": {
+    "value": "Web version of my IdeaMe mobile app.",
+    "type": "string"
+  },
+  "name": { "value": "IdeaMe", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Github", "type": "string" },
+          "href": { "value": "https://github.com/shaunsaker/idea-me", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1493317241000, "type": "number" },
+  "categories": { "value": [{ "value": "webApps", "type": "string" }], "type": "array" },
+  "longDescription": {
+    "value": "I built this app before I built the mobile version of it. It's old and unused but I like to see where I came from compared to where I am now. #neverforget",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "react", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  }
+}

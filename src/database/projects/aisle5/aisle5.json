@@ -1,0 +1,40 @@
+{
+  "shortDescription": {
+    "value": "Super smart grocery management. It's a big dill.",
+    "type": "string"
+  },
+  "name": { "value": "Aisle 5", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Android", "type": "string" },
+          "href": { "value": "https://play.google.com/store/apps/details?id=co.za.shaunsaker.aisle5", "type": "string" }
+        },
+        "type": "object"
+      },
+      {
+        "value": {
+          "name": { "value": "iOS", "type": "string" },
+          "href": { "value": "https://apps.apple.com/us/app/aisle-5/id1439736961?ls=1", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1573385681000, "type": "number" },
+  "categories": { "value": [{ "value": "mobileApps", "type": "string" }], "type": "array" },
+  "longDescription": {
+    "value": "You know how when you run out of something, you write it down on a piece of paper and when you have enough items in your list, you go out and buy them... Only to throw that list away and repeat the process again the following week? What if you could save those lists and use them to create meaningful insights about your grocery usage. Well now you can! With Aisle 5... Aisle 5 tries to solve that problem by saving your grocery lists, allowing it to calculate how often you use items. It will then recommend how many of each item you should by on a weekly, monthly and yearly basis and can even predict how much stock you have left! There is no annoying signup or login, it is completely anonymous and completely free, for now and forever more. It's a big dill. Features include: add a shopping list for your next grocery shop, view your grocery shopping history, get item usage predictions based on your previous usage and we'll tell you what to buy on a weekly, monthly or yearly basis, based on your previous usage.",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "reactNative", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  }
+}

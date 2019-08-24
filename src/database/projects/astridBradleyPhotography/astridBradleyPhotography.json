@@ -1,0 +1,20 @@
+{
+  "shortDescription": {
+    "value": "A web app to manage Astrid Bradley Photography's photo shoots.",
+    "type": "string"
+  },
+  "name": { "value": "Astrid Bradley Photography", "type": "string" },
+  "categories": { "value": [{ "value": "webApps", "type": "string" }], "type": "array" },
+  "longDescription": {
+    "value": "My wife, the owner of Astrid Bradley Photography, has been sinking countless hours into manually updating her website html when adding new shoots, updating client progress and managing photos. I decided to create an app for her (as we do), to help save her time.",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "react", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  }
+}

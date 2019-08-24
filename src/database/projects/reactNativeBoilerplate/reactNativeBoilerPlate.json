@@ -1,0 +1,33 @@
+{
+  "shortDescription": {
+    "value": "A React-Native, Redux and Firebase project.",
+    "type": "string"
+  },
+  "name": { "value": "React-Native Boilerplate", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Github", "type": "string" },
+          "href": { "value": "https://github.com/AuxStudio/react-native-boiler-plate", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1562610041000, "type": "number" },
+  "categories": { "value": [{ "value": "openSource", "type": "string" }], "type": "array" },
+  "longDescription": {
+    "value": "A boilerplate project housing all of the code that I normally would have copied across to new projects. While it is a work in progress, if you wanted to see how I code, this is a great place to see. This is a mammoth project and I am super proud if it. It's got all sorts of awesome bells and whistles that I typically use in my React-Native projects.",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "reactNative", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  }
+}

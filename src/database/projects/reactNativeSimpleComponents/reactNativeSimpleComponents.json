@@ -1,0 +1,36 @@
+{
+  "shortDescription": {
+    "value": "A collection of simple, reusable React-Native components.",
+    "type": "string"
+  },
+  "name": { "value": "React-Native Simple Components", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Github", "type": "string" },
+          "href": { "value": "https://github.com/AuxStudio/react-native-simple-components", "type": "string" }
+        },
+        "type": "object"
+      },
+      {
+        "value": {
+          "name": { "value": "Npm", "type": "string" },
+          "href": { "value": "https://www.npmjs.com/package/react-native-simple-components", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1562178041000, "type": "number" },
+  "categories": { "value": [{ "value": "openSource", "type": "string" }], "type": "array" },
+  "longDescription": {
+    "value": "A collection of simple, customisable reusable react-native components with a decent amount of functionality out of the box. I don't use this package anymore tbh. I've found that it's really quick to create components on a per project basis and the customisability of that vs the convenience of using this package outweighs the latter.7 ",
+    "type": "string"
+  },
+  "skills": {
+    "value": [{ "value": "javascript", "type": "string" }, { "value": "reactNative", "type": "string" }],
+    "type": "array"
+  }
+}

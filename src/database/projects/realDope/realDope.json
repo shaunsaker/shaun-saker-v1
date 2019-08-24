@@ -1,0 +1,36 @@
+{
+  "shortDescription": {
+    "value": "A React, Redux and Firebase implementation of the classic Dope Wars game from the 90s.",
+    "type": "string"
+  },
+  "name": { "value": "Real Dope", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Github", "type": "string" },
+          "href": { "value": "https://github.com/shaunsaker/real-dope", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1491243641000, "type": "number" },
+  "categories": {
+    "value": [{ "value": "webApps", "type": "string" }, { "value": "games", "type": "string" }],
+    "type": "array"
+  },
+  "longDescription": {
+    "value": "One of the first 'full' apps that I built. I had so much fun building it. The code is horrendous. #neverforget",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "react", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  }
+}
