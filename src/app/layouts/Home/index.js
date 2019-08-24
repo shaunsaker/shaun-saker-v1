@@ -23,6 +23,7 @@ export class HomeContainer extends React.Component {
      * Store
      */
     dispatch: PropTypes.func,
+    authenticated: PropTypes.bool,
     categories: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
@@ -42,9 +43,24 @@ export class HomeContainer extends React.Component {
 
   componentDidMount() {
     /*
-     * TODO: Only sync if authed
+     * If the user is authenticated, sync the data
      */
-    this.syncData();
+    const { authenticated } = this.props;
+
+    if (authenticated) {
+      this.syncData();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    /*
+     * If the user just became authenticated, sync the data
+     */
+    const { authenticated } = this.props;
+
+    if (authenticated && !prevProps.authenticated) {
+      this.syncData();
+    }
   }
 
   onChangeCategory(index) {
@@ -192,9 +208,12 @@ export class HomeContainer extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { categories, projects, skills } = state;
+  const { user, categories, projects, skills } = state;
+  const { uid } = user;
+  const authenticated = uid ? true : false;
 
   return {
+    authenticated,
     categories,
     projects,
     skills,
