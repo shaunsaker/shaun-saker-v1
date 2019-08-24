@@ -173,7 +173,7 @@ export class HomeContainer extends React.Component {
        * Get a pretty date
        */
       const { releaseDate } = item;
-      const prettyReleaseDate = getPrettyDate(releaseDate, true);
+      const prettyReleaseDate = releaseDate ? getPrettyDate(releaseDate, true) : 'In Progress';
 
       /*
        * Get the skill names
