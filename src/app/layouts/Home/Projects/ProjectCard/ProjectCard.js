@@ -85,7 +85,7 @@ const ProjectCard = ({
             </div>
 
             <div className="links-container">
-              {links &&
+              {links ? (
                 links.map((item) => {
                   return (
                     <div key={item.name} className="link-container">
@@ -94,7 +94,10 @@ const ProjectCard = ({
                       </a>
                     </div>
                   );
-                })}
+                })
+              ) : (
+                <Typography type="paragraph">No links to display</Typography>
+              )}
             </div>
           </div>
 
@@ -106,7 +109,7 @@ const ProjectCard = ({
             </div>
 
             <div className="screenshots-container">
-              {screenshots &&
+              {screenshots ? (
                 screenshots.map((item, index) => {
                   const alt = `${name} - ${index}`;
 
@@ -115,7 +118,10 @@ const ProjectCard = ({
                       <img src={item.src} alt={alt} className="screenshot" />
                     </div>
                   );
-                })}
+                })
+              ) : (
+                <Typography type="paragraph">No screenshots to display</Typography>
+              )}
             </div>
           </div>
         </div>
