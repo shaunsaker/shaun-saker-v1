@@ -17,7 +17,6 @@ const ProjectCard = ({
   longDescription,
   skills,
   links,
-  screenshots,
   isCollapsed,
   handleToggleCollapse,
 }) => {
@@ -77,7 +76,7 @@ const ProjectCard = ({
             <Typography type="paragraph">{longDescription}</Typography>
           </div>
 
-          <div className="details-section-container">
+          <div>
             <div className="details-heading-container">
               <Typography type="paragraph" bold>
                 Links
@@ -100,30 +99,6 @@ const ProjectCard = ({
               )}
             </div>
           </div>
-
-          <div>
-            <div className="details-heading-container">
-              <Typography type="paragraph" bold>
-                Screenshots
-              </Typography>
-            </div>
-
-            <div className="screenshots-container">
-              {screenshots ? (
-                screenshots.map((item, index) => {
-                  const alt = `${name} - ${index}`;
-
-                  return (
-                    <div key={item.src} className="screenshot-container">
-                      <img src={item.src} alt={alt} className="screenshot" />
-                    </div>
-                  );
-                })
-              ) : (
-                <Typography type="paragraph">No screenshots to display</Typography>
-              )}
-            </div>
-          </div>
         </div>
       </ExpansionPanelDetails>
 
@@ -140,7 +115,6 @@ ProjectCard.propTypes = {
   longDescription: PropTypes.string,
   skills: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })),
   links: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string, href: PropTypes.string })),
-  screenshots: PropTypes.arrayOf(PropTypes.shape({ src: PropTypes.string })),
   isCollapsed: PropTypes.bool,
   handleToggleCollapse: PropTypes.func,
 };

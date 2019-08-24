@@ -3,7 +3,6 @@ import css from 'styled-jsx/css'; // eslint-disable-line
 import { animation, colors, rhythm } from '../../../../static/styles/styleConstants';
 
 const summaryAvatarSize = 100;
-const screenshotSize = 200;
 
 const styles = css`
   .summary-container {
@@ -78,21 +77,6 @@ const styles = css`
 
   .link {
     text-decoration: none;
-  }
-
-  .screenshots-container {
-    display: flex;
-    overflow-y: scroll;
-  }
-
-  .screenshot-container {
-    margin-right: ${rhythm.hz / 2}px;
-  }
-
-  .screenshot {
-    width: ${screenshotSize}px;
-    height: ${screenshotSize}px;
-    object-fit: cover;
   }
 `;
 
