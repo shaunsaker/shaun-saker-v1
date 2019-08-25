@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getPrettyDate, sortArrayOfObjectsByKey } from 'js-simple-utils';
+import { createUID, getPrettyDate, sortArrayOfObjectsByKey } from 'js-simple-utils';
 
 import Home from './Home';
+import withSaveDocument from '../../enhancers/withSaveDocument';
 
 export class HomeContainer extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export class HomeContainer extends React.Component {
     this.onChangeCategory = this.onChangeCategory.bind(this);
     this.syncData = this.syncData.bind(this);
     this.setCategoryIndex = this.setCategoryIndex.bind(this);
+    this.onSubmitContactForm = this.onSubmitContactForm.bind(this);
 
     this.state = {
       categoryIndex: 0,
@@ -19,6 +21,12 @@ export class HomeContainer extends React.Component {
   }
 
   static propTypes = {
+    /*
+     * withSaveDocument
+     */
+    hasSuccess: PropTypes.bool,
+    saveDocument: PropTypes.func,
+
     /*
      * Store
      */
@@ -65,6 +73,21 @@ export class HomeContainer extends React.Component {
 
   onChangeCategory(index) {
     this.setCategoryIndex(index);
+  }
+
+  onSubmitContactForm(form) {
+    const { saveDocument } = this.props;
+    const url = `contact/${createUID()}`;
+    const dateCreated = Date.now();
+    const document = {
+      ...form,
+      dateCreated,
+    };
+
+    saveDocument({
+      url,
+      document,
+    });
   }
 
   syncData() {
@@ -210,7 +233,16 @@ export class HomeContainer extends React.Component {
       },
     };
 
-    return <Home projectsProps={projectsProps} skillsProps={skillsProps} />;
+    /*
+     * Create the contactProps
+     */
+    const { hasSuccess } = this.props;
+    const contactProps = {
+      hasSuccess,
+      handleSubmit: this.onSubmitContactForm,
+    };
+
+    return <Home skillsProps={skillsProps} projectsProps={projectsProps} contactProps={contactProps} />;
   }
 }
 
@@ -227,4 +259,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(HomeContainer);
+export default withSaveDocument(connect(mapStateToProps)(HomeContainer));
