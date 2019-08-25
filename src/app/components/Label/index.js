@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import { colors } from '../../static/styles/styleConstants';
 
 import Typography from '../Typography';
 
@@ -11,7 +10,7 @@ const Label = ({ small, children }) => {
 
   return (
     <div className={`container${small ? ' small' : ''}`}>
-      <Typography type={textType} color={colors.tertiary}>
+      <Typography type={textType} bold>
         {children}
       </Typography>
 

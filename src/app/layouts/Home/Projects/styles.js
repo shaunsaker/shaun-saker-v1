@@ -12,6 +12,7 @@ const styles = css`
 
   .items-container {
     display: flex;
+    flex-direction: column;
   }
 
   .item-container {

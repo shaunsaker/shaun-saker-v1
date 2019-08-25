@@ -6,7 +6,7 @@ const styles = css`
   .container {
     border-radius: 4px;
     padding: ${rhythm.vt / 2}px ${rhythm.hz}px;
-    background-image: linear-gradient(${colors.primary}, ${colors.secondary});
+    background-color: ${colors.tertiary};
   }
 
   .small {
