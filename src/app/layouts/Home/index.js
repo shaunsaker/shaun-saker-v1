@@ -166,9 +166,16 @@ export class HomeContainer extends React.Component {
     const sortedProjects = sortArrayOfObjectsByKey(filteredProjects, 'releaseDate', true);
 
     /*
+     * Add in progress items to the top of the list
+     */
+    const inProgressProjects = sortedProjects.filter((item) => item.inProgress);
+    const nonInProgressProjects = sortedProjects.filter((item) => !item.inProgress);
+    const allProjects = [...inProgressProjects, ...nonInProgressProjects];
+
+    /*
      * Map the projects to what we expect
      */
-    const mappedProjects = sortedProjects.map((item) => {
+    const mappedProjects = allProjects.map((item) => {
       /*
        * Get a pretty date
        */
