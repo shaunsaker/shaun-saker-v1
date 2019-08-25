@@ -11,7 +11,7 @@ const Skills = ({ items }) => {
   return (
     <div className="container">
       <Section id="skills" title="Skills">
-        {items ? (
+        {items && items.length ? (
           <div className="items-container">
             {items.map((item) => {
               return (

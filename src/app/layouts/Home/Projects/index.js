@@ -12,7 +12,7 @@ const Projects = ({ tabBarProps, items }) => {
   return (
     <div className="container">
       <Section id="projects" title="Projects">
-        {items ? (
+        {items && items.length ? (
           <Fragment>
             <div className="tab-bar-container">
               <TabBar {...tabBarProps} />
