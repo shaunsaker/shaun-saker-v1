@@ -15,7 +15,7 @@ const projectThumbnails = {
   markdownPreviewer: 'placeholder.png',
   nextJsSimpleBoilerplate: 'github.png',
   pomodoroClock: 'placeholder.png',
-  portfolio: 'placeholder.png',
+  portfolio: 'portfolio.png',
   prettierConfigAux: 'npm.png',
   randomQuoteMachine: 'placeholder.png',
   reactNativeBoilerplate: 'github.png',
