@@ -26,6 +26,8 @@
     "update-deps": "ncu -u && yarn",
     "build-app": "yarn run build && yarn run export && yarn run build-storybook",
     "deploy": "firebase deploy",
+    "deploy-hosting": "firebase deploy --only hosting",
+    "deploy-functions": "firebase deploy --only functions",
     "db-backup": "firestore-backup-restore --accountCredentials ./src/config/firebase/development/credentials.json --backupPath ./src/database",
     "db-restore": "firestore-backup-restore --restoreAccountCredentials ./src/config/firebase/development/credentials.json --backupPath ./src/database"
   },
