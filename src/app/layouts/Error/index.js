@@ -10,11 +10,11 @@ const Error = ({ errorMessage }) => {
   return (
     <Layout>
       <div className="container">
-        <Typography type="title" center gutterBottom>
+        <Typography type="title" center gutterBottom color="white">
           Houston, we have a problem.
         </Typography>
 
-        <Typography type="paragraph" center>
+        <Typography type="paragraph" center color="white">
           {errorMessage}
         </Typography>
       </div>

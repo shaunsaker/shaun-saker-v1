@@ -4,6 +4,8 @@ const styles = css`
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100vh; // fix storybook
   }
 `;
 
