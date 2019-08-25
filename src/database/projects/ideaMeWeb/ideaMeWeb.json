@@ -8,6 +8,13 @@
     "value": [
       {
         "value": {
+          "name": { "value": "App", "type": "string" },
+          "href": { "value": "https://idea-me.firebaseapp.com/sign-in", "type": "string" }
+        },
+        "type": "object"
+      },
+      {
+        "value": {
           "name": { "value": "Github", "type": "string" },
           "href": { "value": "https://github.com/shaunsaker/idea-me", "type": "string" }
         },

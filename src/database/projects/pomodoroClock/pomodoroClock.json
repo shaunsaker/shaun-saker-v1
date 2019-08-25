@@ -16,5 +16,27 @@
   "skills": {
     "value": [{ "value": "javascript", "type": "string" }, { "value": "react", "type": "string" }],
     "type": "array"
+  },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "App", "type": "string" },
+          "href": { "value": "https://fcc-apps.web.app/apps/pomodoro_clock/", "type": "string" }
+        },
+        "type": "object"
+      },
+      {
+        "value": {
+          "name": { "value": "Github", "type": "string" },
+          "href": {
+            "value": "https://github.com/shaunsaker/Portfolio/tree/master/app/apps/pomodoro_clock",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
   }
 }

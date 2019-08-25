@@ -8,6 +8,13 @@
     "value": [
       {
         "value": {
+          "name": { "value": "App", "type": "string" },
+          "href": { "value": "https://real-dope.web.app/", "type": "string" }
+        },
+        "type": "object"
+      },
+      {
+        "value": {
           "name": { "value": "Github", "type": "string" },
           "href": { "value": "https://github.com/shaunsaker/real-dope", "type": "string" }
         },

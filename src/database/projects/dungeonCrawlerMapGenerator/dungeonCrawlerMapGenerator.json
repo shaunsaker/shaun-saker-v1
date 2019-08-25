@@ -1,12 +1,12 @@
 {
   "shortDescription": {
-    "value": "A calculator",
+    "value": "A map generator for Dungeon Crawler",
     "type": "string"
   },
-  "name": { "value": "Javascript Calculator", "type": "string" },
+  "name": { "value": "Dungeon Crawler Map Generator", "type": "string" },
   "releaseDate": { "value": 1467742841000, "type": "number" },
   "categories": {
-    "value": [{ "value": "webApps", "type": "string" }],
+    "value": [{ "value": "webApps", "type": "string" }, { "value": "games", "type": "string" }],
     "type": "array"
   },
   "longDescription": {
@@ -22,7 +22,7 @@
       {
         "value": {
           "name": { "value": "App", "type": "string" },
-          "href": { "value": "https://fcc-apps.web.app/apps/javascript_calculator/", "type": "string" }
+          "href": { "value": "https://fcc-apps.web.app/apps/fcc_dungeon_map_generator/", "type": "string" }
         },
         "type": "object"
       },
@@ -30,7 +30,7 @@
         "value": {
           "name": { "value": "Github", "type": "string" },
           "href": {
-            "value": "https://github.com/shaunsaker/Portfolio/tree/master/app/apps/javascript_calculator",
+            "value": "https://github.com/shaunsaker/Portfolio/tree/master/app/apps/fcc_dungeon_map_generator",
             "type": "string"
           }
         },
