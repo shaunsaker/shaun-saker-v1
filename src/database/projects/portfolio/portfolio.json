@@ -51,5 +51,6 @@
       { "value": "firebase", "type": "string" }
     ],
     "type": "array"
-  }
+  },
+  "releaseDate": { "value": 1566714113211, "type": "number" }
 }
