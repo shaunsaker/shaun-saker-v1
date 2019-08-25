@@ -1,7 +1,5 @@
 {
   "projects": {
     "default": "shaun-saker-development",
-    "development": "shaun-saker-development",
-    "production": "shaun-saker-production"
   }
 }
