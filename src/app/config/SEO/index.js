@@ -1,12 +1,12 @@
 import app from '../app';
 
 const { name, url } = app;
-const description = "Shaun Saker's development portfolio";
+const description = "Shaun Saker's Development Portfolio";
 
 const SEO = {
   title: name,
   description,
-  keywords: 'portfolio javascript react',
+  keywords: 'portfolio developer javascript react react-native firebase',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
