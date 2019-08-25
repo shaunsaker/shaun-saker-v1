@@ -10,6 +10,7 @@ const TabBar = ({ currentTabIndex, tabs, handleClick }) => {
         indicatorColor="secondary"
         textColor="secondary"
         onChange={(event, index) => handleClick(index)}
+        variant="scrollable"
       >
         {tabs &&
           tabs.map((tab) => {
