@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ProjectCard from './ProjectCard';
+import projectThumbnails from '../../../../static/images/project-thumbnails';
 
 export class ProjectCardContainer extends React.Component {
   constructor(props) {
@@ -14,7 +16,9 @@ export class ProjectCardContainer extends React.Component {
     };
   }
 
-  static propTypes = {};
+  static propTypes = {
+    id: PropTypes.string,
+  };
 
   static defaultProps = {};
 
@@ -32,8 +36,18 @@ export class ProjectCardContainer extends React.Component {
 
   render() {
     const { isCollapsed } = this.state;
+    const { id } = this.props;
+    const thumbnailFileName = projectThumbnails[id];
+    const thumbnailUrl = `static/images/project-thumbnails/${thumbnailFileName}`;
 
-    return <ProjectCard {...this.props} isCollapsed={isCollapsed} handleToggleCollapse={this.onToggleCollapse} />;
+    return (
+      <ProjectCard
+        {...this.props}
+        thumbnailUrl={thumbnailUrl}
+        isCollapsed={isCollapsed}
+        handleToggleCollapse={this.onToggleCollapse}
+      />
+    );
   }
 }
 

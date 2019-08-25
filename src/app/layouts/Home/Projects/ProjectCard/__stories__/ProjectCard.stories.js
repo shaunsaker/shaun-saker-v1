@@ -5,8 +5,8 @@ import ProjectCard from '..';
 
 const project = {
   name: 'WineMe',
-  releaseDate: 'Feb 2018',
-  thumbnailUrl: '/static/images/avatar.jpg',
+  releaseDate: '31 January 2018',
+  thumbnailUrl: 'static/images/avatar.png',
   shortDescription: 'Keep track of the wine farms you’ve visited and find new ones that you haven’t!',
   longDescription:
     'Keep track of the wine farms you’ve visited and find new ones that you haven’t! Keep track of the wine farms you’ve visited and find new ones that you haven’t! Keep track of the wine farms you’ve visited and find new ones that you haven’t!',

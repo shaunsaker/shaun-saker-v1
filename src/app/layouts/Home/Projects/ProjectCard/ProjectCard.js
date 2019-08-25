@@ -25,7 +25,7 @@ const ProjectCard = ({
 
   return (
     <ExpansionPanel expanded={!isCollapsed} style={muiStyles.container}>
-      <ExpansionPanelSummary>
+      <ExpansionPanelSummary style={muiStyles.innerContainer}>
         <div className="summary-container">
           <div className="summary-avatar-container">
             <img src={thumbnailUrl} alt={name} className="summary-avatar" />
@@ -39,7 +39,7 @@ const ProjectCard = ({
                 </Typography>
               </div>
 
-              <Typography type="paragraph" secondary>{`(${releaseDate})`}</Typography>
+              <Typography type="small" secondary>{`(${releaseDate})`}</Typography>
             </div>
 
             <div className="summary-description-container">
