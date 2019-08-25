@@ -37,7 +37,7 @@ export class ProjectCardContainer extends React.Component {
   render() {
     const { isCollapsed } = this.state;
     const { id } = this.props;
-    const thumbnailFileName = projectThumbnails[id];
+    const thumbnailFileName = projectThumbnails[id] || 'placeholder.png';
     const thumbnailUrl = `static/images/project-thumbnails/${thumbnailFileName}`;
 
     return (
