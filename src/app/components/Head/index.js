@@ -11,6 +11,14 @@ const primaryColor = colors.primary;
 const defaultTitle = SEO.title;
 const defaultDescription = SEO.description;
 
+const gaScript = `  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ${process.env.REACT_APP_GA_TRACKING_ID});
+`;
+
 const HeadComponent = ({ title, description, router }) => {
   const { pathname } = router;
   const routesArray = convertObjectToArray(routes);
@@ -28,51 +36,20 @@ const HeadComponent = ({ title, description, router }) => {
       <meta key="keywords" name="keywords" content={SEO.keywords} />
 
       {/* Responsiveness */}
-      <meta
-        key="viewport"
-        name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1.0"
-      />
+      <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
 
       {/* Favicons */}
-      <link
-        key="apple-touch-icon"
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/static/icons/apple-touch-icon.png"
-      />
-      <link
-        key="favicon-lg"
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/static/icons/favicon-32x32.png"
-      />
-      <link
-        key="favicon-sm"
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/static/icons/favicon-16x16.png"
-      />
-      <link
-        key="safari-icon"
-        rel="mask-icon"
-        href="/static/icons/safari-pinned-tab.svg"
-        color={primaryColor}
-      />
+      <link key="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />
+      <link key="favicon-lg" rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
+      <link key="favicon-sm" rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
+      <link key="safari-icon" rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color={primaryColor} />
 
       {/* Theme */}
       <meta key="ms-tile-color" name="msapplication-TileColor" content={primaryColor} />
       <meta key="theme-color" name="theme-color" content={primaryColor} />
 
       {/* Manifest file */}
-      <link
-        key="manifest"
-        type="application/manifest+json"
-        rel="manifest"
-        href="/static/manifest.json"
-      />
+      <link key="manifest" type="application/manifest+json" rel="manifest" href="/static/manifest.json" />
 
       {/* Open graph */}
       <meta key="og:url" property="og:url" content={SEO.openGraph.url} />
@@ -87,9 +64,18 @@ const HeadComponent = ({ title, description, router }) => {
       <meta key="twitter:site" name="twitter:site" content={SEO.twitter.handle} />
 
       {/* Normalize css */}
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+      {/* GA */}
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_TRACKING_ID}`}
+      ></script>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: gaScript,
+        }}
       />
 
       <noscript>Your browser does not support JavaScript!</noscript>
