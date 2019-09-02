@@ -11,14 +11,6 @@ const primaryColor = colors.primary;
 const defaultTitle = SEO.title;
 const defaultDescription = SEO.description;
 
-const gaScript = `  
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', ${process.env.REACT_APP_GA_TRACKING_ID});
-`;
-
 const HeadComponent = ({ title, description, router }) => {
   const { pathname } = router;
   const routesArray = convertObjectToArray(routes);
@@ -65,18 +57,6 @@ const HeadComponent = ({ title, description, router }) => {
 
       {/* Normalize css */}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
-      {/* GA */}
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_TRACKING_ID}`}
-      ></script>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: gaScript,
-        }}
-      />
 
       <noscript>Your browser does not support JavaScript!</noscript>
     </Head>

@@ -1,3 +1,6 @@
 {
-  "extends": "aux"
+  "extends": "aux",
+  "rules": {
+    "react/no-danger": "off"
+  }
 }
