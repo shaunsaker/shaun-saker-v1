@@ -25,6 +25,9 @@ const styles = css`
     text-decoration: none;
     cursor: pointer;
     padding: ${rhythm.vt}px ${rhythm.hz / 4}px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
   .link:focus {
     outline: 2px solid ${colors.accent};
