@@ -24,7 +24,7 @@ const ProjectCard = ({
   const toggleButtonTooltipText = isCollapsed ? 'Expand' : 'Collapse';
 
   return (
-    <ExpansionPanel expanded={!isCollapsed} style={muiStyles.container} onClick={handleToggleCollapse}>
+    <ExpansionPanel expanded={!isCollapsed} style={muiStyles.container}>
       <ExpansionPanelSummary style={muiStyles.innerContainer}>
         <div className="summary-container">
           <div className="summary-avatar-container">
