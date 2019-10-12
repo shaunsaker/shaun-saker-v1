@@ -12,7 +12,7 @@ export class ProjectCardContainer extends React.Component {
     this.setIsCollapsed = this.setIsCollapsed.bind(this);
 
     this.state = {
-      isCollapsed: true,
+      isCollapsed: false,
     };
   }
 
