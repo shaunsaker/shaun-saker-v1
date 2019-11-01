@@ -22,7 +22,7 @@ const Jumbotron = () => {
 
       <div className="description-text-container">
         <Typography type="paragraph" color={colors.tertiary}>
-          Javascript Developer since 2016
+          Environmental Consultant turned Javascript Developer since 2016
         </Typography>
       </div>
 
