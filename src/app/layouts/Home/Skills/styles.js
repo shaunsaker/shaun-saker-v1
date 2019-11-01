@@ -6,6 +6,10 @@ const styles = css`
   .container {
   }
 
+  .description-text-container {
+    margin-bottom: ${rhythm.vt * 2}px;
+  }
+
   .items-container {
     display: flex;
     flex-wrap: wrap;

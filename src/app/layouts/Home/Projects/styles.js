@@ -7,7 +7,7 @@ const styles = css`
   }
 
   .description-text-container {
-    margin-bottom: ${rhythm.vt}px;
+    margin-bottom: ${rhythm.vt * 2}px;
   }
 
   .tab-bar-container {
