@@ -6,6 +6,10 @@ const styles = css`
   .container {
   }
 
+  .description-text-container {
+    margin-bottom: ${rhythm.vt}px;
+  }
+
   .tab-bar-container {
     margin-bottom: ${rhythm.vt * 2}px;
   }
