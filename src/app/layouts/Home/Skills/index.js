@@ -17,7 +17,7 @@ const Skills = ({ items }) => {
             <div className="description-text-container">
               <Typography type="paragraph">
                 Here is a list of my core skills. It excludes the tools/frameworks that I use (ie. <b>Storybook</b>,{' '}
-                <b>Next.js</b>, <b>Jest</b> etc).
+                <b>Next.js</b>, <b>Jest</b>, <b>ESLint</b>, <b>Prettier</b> etc).
               </Typography>
             </div>
 
