@@ -24,6 +24,10 @@ const styles = css`
     border-radius: ${sizes.borderRadius}px;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .footer-text-container {
     margin-bottom: ${rhythm.vt}px;
   }

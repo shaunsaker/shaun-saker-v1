@@ -14,10 +14,12 @@ export class FormContainer extends React.Component {
     this.getInputValue = this.getInputValue.bind(this);
     this.setValues = this.setValues.bind(this);
     this.setFieldIndicesWithErrors = this.setFieldIndicesWithErrors.bind(this);
+    this.setIsDisabled = this.setIsDisabled.bind(this);
 
     this.state = {
       fieldIndicesWithErrors: [],
       values: {}, // any select input values will be stored here (MUI does not manage that internally)
+      isDisabled: false,
     };
   }
 
@@ -60,6 +62,15 @@ export class FormContainer extends React.Component {
 
     if (handleChange) {
       handleChange(name, inputValue);
+    }
+
+    /*
+     * Anti-spam
+     *
+     * If a hidden field is filled out, it's a bot
+     */
+    if (field.hidden) {
+      this.setIsDisabled(true);
     }
   }
 
@@ -141,17 +152,15 @@ export class FormContainer extends React.Component {
     });
   }
 
+  setIsDisabled(isDisabled) {
+    this.setState({
+      isDisabled,
+    });
+  }
+
   render() {
-    const { fieldIndicesWithErrors, values } = this.state;
-    const {
-      fields,
-      footerComponent,
-      children,
-      submitButtonText,
-      disabled,
-      secondaryButton,
-      center,
-    } = this.props;
+    const { fieldIndicesWithErrors, values, isDisabled } = this.state;
+    const { fields, footerComponent, children, submitButtonText, disabled, secondaryButton, center } = this.props;
     let newFields = cloneObject(fields); // clone the object so that we don't mutate fields (will cause Form not to update)
 
     /*
@@ -188,7 +197,7 @@ export class FormContainer extends React.Component {
         fields={newFields}
         footerComponent={footerComponent}
         submitButtonText={submitButtonText}
-        disabled={disabled}
+        disabled={isDisabled || disabled}
         secondaryButton={secondaryButton}
         center={center}
         handleChange={this.onChange}

@@ -46,10 +46,11 @@ const Form = ({
           pattern,
           multiline,
           variant,
+          hidden,
         } = field;
 
         return (
-          <div key={name} className="input-container">
+          <div key={name} className={`input-container ${hidden ? 'hidden' : ''}`}>
             <TextField
               name={name}
               type={type}
