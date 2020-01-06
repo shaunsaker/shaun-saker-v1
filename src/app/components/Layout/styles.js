@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-import { colors, rhythm, sizes } from '../../static/styles/styleConstants';
+import { colors, sizes } from '../../static/styles/styleConstants';
 
 const headerHeight = 64;
 
@@ -26,6 +26,7 @@ const styles = css`
     justify-content: center;
     align-items: center;
     align-items: stretch;
+    z-index: 0;
   }
 
   .dev-info-container {

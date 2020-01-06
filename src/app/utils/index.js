@@ -1,5 +1,2 @@
-const utils = {};
-
-export {};
-
-export default utils;
+export * from './getRandomInt';
+export * from './shuffleArray';
