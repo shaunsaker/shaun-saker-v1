@@ -18,7 +18,7 @@ const contactLinks = [
   },
   {
     name: 'Github',
-    href: 'Github://github.com/shaunsaker',
+    href: 'https://github.com/shaunsaker',
     iconName: 'github',
   },
 ];
