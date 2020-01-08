@@ -36,6 +36,8 @@ const styles = css`
 
   .contact-buttons-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .contact-button-container {

@@ -16,6 +16,11 @@ const contactLinks = [
     href: `${app.contactDetails.linkedIn}`,
     iconName: 'person',
   },
+  {
+    name: 'Github',
+    href: 'Github://github.com/shaunsaker',
+    iconName: 'github',
+  },
 ];
 
 export default contactLinks;
