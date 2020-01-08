@@ -1,0 +1,36 @@
+{
+  "longDescription": {
+    "value": "I built this app using ReactXP (React and React-Native), Typescript and Firebase. It is still a work in progress.",
+    "type": "string"
+  },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "react", "type": "string" },
+      { "value": "reactNative", "type": "string" },
+      { "value": "typescript", "type": "string" },
+      { "value": "reactxp", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  },
+  "shortDescription": {
+    "value": "Maximise your consecutive time-off based on your country's public holidays and your available leave days.",
+    "type": "string"
+  },
+  "name": { "value": "Work Less", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "href": { "value": "https://github.com/shaunsaker/work-less", "type": "string" },
+          "name": { "value": "Github", "type": "string" }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "inProgress": { "value": true, "type": "boolean" },
+  "categories": { "value": [{ "value": "webApps", "type": "string" }], "type": "array" }
+}
