@@ -5,6 +5,7 @@
 const projectThumbnails = {
   aisle5: 'aisle-5.png',
   astridBradleyPhotography: 'astrid-bradley-photography.png',
+  cvd19za: 'cvd19za.png',
   eslintConfigAux: 'npm.png',
   ideaMe: 'idea-me.png',
   ideaMeWeb: 'idea-me.png',

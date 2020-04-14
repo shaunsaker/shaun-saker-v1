@@ -1,0 +1,33 @@
+{
+  "name": { "value": "CVD19ZA", "type": "string" },
+  "links": {
+    "value": [
+      {
+        "value": {
+          "name": { "value": "Android", "type": "string" },
+          "href": {
+            "value": "https://install.appcenter.ms/users/sakershaun/apps/cvd19za-android/distribution_groups/default",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    ],
+    "type": "array"
+  },
+  "releaseDate": { "value": 1585979705000, "type": "number" },
+  "categories": { "value": [{ "value": "mobileApps", "type": "string" }], "type": "array" },
+  "skills": {
+    "value": [
+      { "value": "javascript", "type": "string" },
+      { "value": "reactNative", "type": "string" },
+      { "value": "firebase", "type": "string" }
+    ],
+    "type": "array"
+  },
+  "longDescription": {
+    "value": "A live graph and push notifications for COVID-19 in South Africa.",
+    "type": "string"
+  },
+  "shortDescription": { "value": "A live graph and push notifications for COVID-19 in South Africa.", "type": "string" }
+}
