@@ -209,13 +209,15 @@ export class HomeContainer extends React.Component {
        * Get the skill names
        */
       const { skills: projectSkills } = item;
-      const prettySkills = projectSkills.map((skillId) => {
-        const { name } = skills.filter((skill) => skill.id === skillId)[0];
+      const prettySkills = projectSkills
+        .filter((skillId) => skills[skillId])
+        .map((skillId) => {
+          const { name } = skills.filter((skill) => skill.id === skillId)[0];
 
-        return {
-          name,
-        };
-      });
+          return {
+            name,
+          };
+        });
 
       return {
         ...item,
